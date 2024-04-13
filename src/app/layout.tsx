@@ -3,15 +3,16 @@ import "@mantine/core/styles.css";
 import React from "react";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 import Head from "next/head";
+import { anton } from "./fonts";
 
 export const metadata = {
   title: "GKIT",
   description: "Geneva Karr is a drag queen that some find lovely, others do not. All is in good fun.",
 };
 
-export default function RootLayout({ children }: { children: any }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={anton.className}>
       <Head>
         <ColorSchemeScript />
         <link rel="geneva-karr-icon" href="/favicon.svg" sizes="any" />
